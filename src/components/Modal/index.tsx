@@ -12,6 +12,7 @@ interface ProductInfoModalProps {
   dimensions: string;
   onAction: () => void;
   actionLabel: string;
+  buttonDisabled: boolean;
 }
 
 const ProductInfoModal: React.FC<ProductInfoModalProps> = ({
@@ -25,6 +26,7 @@ const ProductInfoModal: React.FC<ProductInfoModalProps> = ({
   dimensions,
   onAction,
   actionLabel,
+  buttonDisabled,
 }) => {
   useEffect(() => {
     if (open) {
@@ -66,11 +68,11 @@ const ProductInfoModal: React.FC<ProductInfoModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute top-4 right-4 z-10 p-2 rounded-full hover:bg-gray-200 transition"
+          className="absolute top-3 right-3 z-20 p-2 rounded-full hover:bg-gray-200 transition"
           onClick={onClose}
           aria-label="Close"
         >
-          <X size={28} />
+          <X size={28} className="text-white md:text-black" />
         </button>
         {/* Slideshow or images */}
         <div className="w-full md:w-1/2 flex items-center justify-center bg-black min-h-[300px] relative">
@@ -124,8 +126,11 @@ const ProductInfoModal: React.FC<ProductInfoModalProps> = ({
             </div>
           </div>
           <button
-            className="w-full bg-black text-white py-3 rounded-lg font-bold text-lg sticky bottom-0 md:static mt-4"
+            className={`w-full bg-black text-white py-3 rounded-lg font-bold text-lg sticky bottom-0 md:static mt-4 ${
+              buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+            }`}
             onClick={onAction}
+            disabled={buttonDisabled}
           >
             {actionLabel}
           </button>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/logo_black.svg";
+import { ReactComponent as Logo } from "../../assets/logo_black.svg";
 
 interface SplashScreenProps {
   onVisibilityChange: (isVisible: boolean) => void;
@@ -34,7 +34,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onVisibilityChange }) => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <img src={logo} alt="Hanmade Logo" className="w-32 h-32 animate-pulse" />
+      <Logo className="w-32 h-32 animate-pulse" />
     </div>
   );
 };

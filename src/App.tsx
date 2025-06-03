@@ -47,10 +47,11 @@ const App = () => {
         begin, which can take 1~3 months. After production + packaging is
         complete, shipments will go out in 1-2 weeks.
         <br />
+        <br />
         국내 배송 안내는 구매하신 주소로 안내 연락 드리겠습니다!
       </>
     ),
-    dimensions: "13cm x 16cm x 21cm (X,Y, Z)",
+    dimensions: "13cm x 16cm x 21cm",
   };
 
   const handleBuyNow = () => {
@@ -114,7 +115,8 @@ const App = () => {
         shipping={incenseChamberInfo.shipping}
         dimensions={incenseChamberInfo.dimensions}
         onAction={handleBuyNow}
-        actionLabel="BUY NOW"
+        actionLabel="AVAILABLE 06/05/2025"
+        buttonDisabled
       />
       <Footer />
     </div>
