@@ -10,6 +10,7 @@ interface ProductWithInfoBlurProps {
   className?: string;
   available?: boolean;
   onHoverAction?: () => void;
+  onView?: () => void;
 }
 
 const ProductWithInfoBlur: React.FC<ProductWithInfoBlurProps> = ({
@@ -21,6 +22,7 @@ const ProductWithInfoBlur: React.FC<ProductWithInfoBlurProps> = ({
   className,
   available,
   onHoverAction,
+  onView,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -47,16 +49,10 @@ const ProductWithInfoBlur: React.FC<ProductWithInfoBlurProps> = ({
     });
   };
 
-  const handleClick = () => {
-    if (!isTouchDevice && available && onHoverAction) {
-      onHoverAction();
-    }
-  };
-
   return (
     <>
       <div
-        onClick={handleClick}
+        onClick={available ? onView : undefined}
         className={`group relative w-full aspect-[1.5] xs:aspect-[0.75] lg:aspect-[0.75] rounded-lg flex items-center justify-center ${
           isTouchDevice ? "cursor-default" : "cursor-none"
         }`}
@@ -97,7 +93,7 @@ const ProductWithInfoBlur: React.FC<ProductWithInfoBlurProps> = ({
               transform: "translate(-50%, -50%)",
             }}
           >
-            {available ? "CLICK TO BUY" : "COMING SOON"}
+            {available ? "CLICK TO VIEW" : "COMING SOON"}
           </div>
         )}
 
@@ -149,7 +145,7 @@ const ProductWithInfoBlur: React.FC<ProductWithInfoBlurProps> = ({
           </div>
 
           <div
-            onClick={available ? onHoverAction : undefined}
+            onClick={available ? onView : undefined}
             className={`self-center flex text-xs items-center h-fit w-fit py-2 px-4 border-2 border-dashed p-1 rounded-full ${
               !available
                 ? "border-gray-400 text-gray-400"
