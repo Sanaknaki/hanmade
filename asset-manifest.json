@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/hanmade/static/css/main.5d94868e.css",
-    "main.js": "/hanmade/static/js/main.db87dce7.js",
-    "static/js/453.ee4ab5aa.chunk.js": "/hanmade/static/js/453.ee4ab5aa.chunk.js",
-    "static/media/logo_black.svg": "/hanmade/static/media/logo_black.d7a3e802707293c3acb9150e06c75e5f.svg",
-    "service-worker.js": "/hanmade/service-worker.js",
-    "index.html": "/hanmade/index.html",
-    "main.5d94868e.css.map": "/hanmade/static/css/main.5d94868e.css.map",
-    "main.db87dce7.js.map": "/hanmade/static/js/main.db87dce7.js.map",
-    "453.ee4ab5aa.chunk.js.map": "/hanmade/static/js/453.ee4ab5aa.chunk.js.map"
+    "main.css": "/static/css/main.73f6f384.css",
+    "main.js": "/static/js/main.8aa69d26.js",
+    "static/js/453.ee4ab5aa.chunk.js": "/static/js/453.ee4ab5aa.chunk.js",
+    "static/media/logo_black.svg": "/static/media/logo_black.d7a3e802707293c3acb9150e06c75e5f.svg",
+    "static/media/logo_black_split_1.svg": "/static/media/logo_black_split_1.0be19d0f98432ecc3743f0caa6948bd6.svg",
+    "static/media/logo_black_split_3.svg": "/static/media/logo_black_split_3.04e214435e71b773e96ab6e204c74d1e.svg",
+    "static/media/logo_black_split_2.svg": "/static/media/logo_black_split_2.2df9e9766d49d5a0003443f2ccba274f.svg",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.73f6f384.css.map": "/static/css/main.73f6f384.css.map",
+    "main.8aa69d26.js.map": "/static/js/main.8aa69d26.js.map",
+    "453.ee4ab5aa.chunk.js.map": "/static/js/453.ee4ab5aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d94868e.css",
-    "static/js/main.db87dce7.js"
+    "static/css/main.73f6f384.css",
+    "static/js/main.8aa69d26.js"
   ]
 }
